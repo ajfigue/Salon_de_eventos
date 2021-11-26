@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="font-size: 25px; color: rgb(108, 22, 247);">
+      <ion-icon name="bag-add"></ion-icon>
+      Registrar Cliente </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myform">
+    <p class="ion-text-center">
+      <img style="width: 100px;" src="assets/icon/Usuario.png" alt="">
+    </p>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="id-card-outline" class="text-primary"></ion-icon>
+          Documento del Cliente</h1></ion-label>
+        <ion-input type="number" formControlName="Ident_Cliente"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="person-add-outline" class="text-primary"></ion-icon>
+          Nombre del Cliente</h1></ion-label>
+        <ion-input type="text" formControlName="Nom_cliente"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="person-outline" class="text-primary"></ion-icon>
+          Apellido del Cliente</h1></ion-label>
+        <ion-input type="text" formControlName="Apel_Cliente"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="calendar-number-outline" class="text-primary"></ion-icon>
+          Edad</h1></ion-label>
+        <ion-input type="number" formControlName="Edad_Cliente"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="bag-handle-outline" class="text-primary"></ion-icon>
+          ¿Afiliado?</h1></ion-label>
+        <ion-input type="text" formControlName="Afiliado"></ion-input>
+      </ion-item>
+
+      <p class="ion-text-center">
+      <ion-button color="tertiary" mode="ios" (click)="alta(myform.value)"  >
+        <ion-icon slot="start" name="bag-add-outline"  fill="clear"></ion-icon>
+        Registrar Cliente</ion-button>
+      </p>     
+    
+  </form>
+  <ion-card mode="ios" color="tertiary" button="true" href="/cliente">
+    <ion-card-header>
+      <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+      <ion-card-title>
+        <ion-icon name="cloud-done-outline"></ion-icon>
+        Clientes Registrados</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Para ver los clientes registrados, ¡Presiona Aqui!
+    </ion-card-content>
+  </ion-card>
+</ion-content>

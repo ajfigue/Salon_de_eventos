@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="font-size: 25px; color: rgb(108, 22, 247);">
+      <ion-icon name="bag-add"></ion-icon>
+      Realizar Alquiler </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myform">
+    <p class="ion-text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="150" height="150"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g transform="translate(25.8,25.8) scale(0.7,0.7)"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none"></path><g id="original-icon" fill="#1abc9c" stroke="none"><path d="M41.28,0c-5.68406,0 -10.32,4.63594 -10.32,10.32v151.36c0,5.68406 4.63594,10.32 10.32,10.32h89.44c5.68406,0 10.32,-4.63594 10.32,-10.32v-41.495c17.36125,-1.73344 30.96,-16.38031 30.96,-34.185c0,-17.80469 -13.59875,-32.45156 -30.96,-34.185v-41.495c0,-5.68406 -4.63594,-10.32 -10.32,-10.32zM137.6,58.48c15.17094,0 27.52,12.34906 27.52,27.52c0,15.17094 -12.34906,27.52 -27.52,27.52c-15.17094,0 -27.52,-12.34906 -27.52,-27.52c0,-15.17094 12.34906,-27.52 27.52,-27.52zM134.16,68.8v13.76h-13.76v6.88h13.76v13.76h6.88v-13.76h13.76v-6.88h-13.76v-13.76z"></path></g><path d="" fill="none" stroke="none"></path><path d="" fill="none" stroke="none"></path></g></g></svg>
+    </p>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="id-card-outline" class="text-primary"></ion-icon>
+          Id Cliente</h1></ion-label>
+        <ion-input type="number" formControlName="Id_Cliente"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="albums-outline" class="text-primary"></ion-icon>
+          Id Salon</h1></ion-label>
+        <ion-input type="number" formControlName="Id_Salon"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="calendar-outline" class="text-primary"></ion-icon>
+          Fecha</h1></ion-label>
+        <ion-input type="date" formControlName="Fecha"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="cash-outline" class="text-primary"></ion-icon>
+          Valor Alquiler</h1></ion-label>
+        <ion-input type="number" formControlName="Valor_Alq"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="card-outline" class="text-primary"></ion-icon>
+          Metodo de Pago</h1></ion-label>
+        <ion-input type="text" formControlName="Met_Pago"></ion-input>
+      </ion-item>
+
+      <p class="ion-text-center">
+      <ion-button color="tertiary" mode="ios" (click)="alta(myform.value)"  >
+        <ion-icon slot="start" name="bag-add-outline"  fill="clear"></ion-icon>
+        Agendar Evento</ion-button>
+      </p>     
+    
+  </form>
+      <ion-card mode="ios" color="danger" button="true" href="/Agendados">
+        <ion-card-header>
+          <ion-card-subtitle>Estamos Para ayudarte</ion-card-subtitle>
+          <ion-card-title>
+            <ion-icon name="cloud-done-outline"></ion-icon>
+            Salones Alquilados
+        </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Para ver los salones alquilados, solo ¡Presiona Aqui!.
+        </ion-card-content>
+      </ion-card>
+</ion-content>

@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="font-size: 25px; color: rgb(108, 22, 247);">
+      <ion-icon name="home-outline"></ion-icon>
+      Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div>
+    <h2 style="text-align: center; color: rgb(108, 22, 247);">
+      ¡Bienvenidos!
+    </h2>
+  </div>
+
+  <ion-slides mode="ios" [options]="option" class="ion-margin-top">
+      <ion-slide>
+        <ion-card>
+          <img src="assets/icon/1.jfif">
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/icon/2.jpg">
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/icon/3.jpeg">
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/icon/4.jpg">
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/icon/5.jpg">
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <img src="assets/icon/6.jpg">
+        </ion-card>
+      </ion-slide>
+  </ion-slides>
+
+  <div class="bodre">
+    <h3 style="color: rgb(108, 22, 247);">¡En manos de Expertos!</h3>
+    <ion-img src="assets/icon/7.jpg"></ion-img>
+    <p style="text-align: justify; text-justify: inter-word;">Logramos tus objetivos, tenemos un equipo experto para la ocación de tu evento. Estamos certificados</p> 
+  </div>
+
+  <div class="bodre">
+    <h3 style="color: rgb(108, 22, 247);">Equipos Necesarios</h3>
+    <ion-img src="assets/icon/8.jpg"></ion-img>
+    <p style="text-align: justify; text-justify: inter-word;">Tenemos gran variedad de equipos que necesites para tu evento. Equipos de sonido, de imagen, kit de luces... en fin, aqui encontraras una gran variedad para tu necesidad.</p>
+  </div>
+
+  <ion-grid class="bodre">
+    <ion-row>
+      <ion-col>
+        <ion-card mode="ios" color="danger" button="true" href="/Agregar_e">
+          <ion-card-header>
+            <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="create-outline"></ion-icon>
+              ¿Alquilar un salon? ¡Click Aqui!</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card mode="ios" color="tertiary" button="true" href="/opclientes">
+          <ion-card-header>
+            <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="person-add-outline"></ion-icon>
+              ¿Registrar un Cliente? ¡Click Aqui!
+          </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card mode="ios" color="medium" button="true" href="/opsalon">
+          <ion-card-header>
+            <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+            <ion-card-title>
+              <ion-icon name="crop-outline"></ion-icon>
+              ¿Registrar un Salon? ¡Click Aqui!
+          </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

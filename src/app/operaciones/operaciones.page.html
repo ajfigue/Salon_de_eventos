@@ -1,0 +1,48 @@
+<!--menu-->
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style=" font-size: 25px; color: rgb(108, 22, 247);">
+      <ion-icon name="albums" class="text-primary"></ion-icon>
+      Lista Alquiler</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!--contenido-->
+  
+  <ion-list>
+    <ion-item *ngFor="let con of lista_contactos">
+      <ion-avatar>
+        <img src="assets/icon/icons8-box-64.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="colorBlue">{{con.id}}</h2>
+        <h2><b>Id Alquiler: </b> {{con.Id_Alquiler}}</h2>
+        <h2><b>Id Cliente: </b> {{con.Id_Cliente}}</h2>
+        <h2><b>Id Salon: </b> {{con.Id_Salon}}</h2>
+        <h2><b>Fecha del Alquiler: </b>{{con.Fecha}}</h2>
+        <h2><b>Valor del Alquiler: </b>{{con.Valor_Alq}}</h2>
+        <h2><b>Metodo De Pago: </b>{{con.Met_Pago}}</h2>
+        <p style="padding-left: 3%;">
+          <ion-button color="danger" mode="ios" (click)="baja(con.Id_Alquiler)">Borrar</ion-button>
+        </p>  
+        
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card mode="ios" color="danger" button="true" href="/Agregar_e">
+    <ion-card-header>
+      <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+      <ion-card-title>
+        <ion-icon name="create-outline"></ion-icon>
+        ¿Alquilar un salon?</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Alquilar un salon no habia sido tan facil, aqui en nuestra pag web podras hacer uso del alquiler en cualquier momento.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

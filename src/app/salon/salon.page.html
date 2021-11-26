@@ -1,0 +1,44 @@
+<!--menu-->
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style=" font-size: 25px; color: rgb(108, 22, 247);">
+      <ion-icon name="albums" class="text-primary"></ion-icon>
+      Lista de Salones</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!--contenido-->
+  
+  <ion-list>
+    <ion-item *ngFor="let con of lista_contactos">
+      <ion-avatar>
+        <img src="assets/icon/icons8-box-64.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 class="colorBlue">{{con.id}}</h2>
+        <h2><b>ID Salon: </b> {{con.Id_Salon}}</h2>
+        <h2><b>Nombre del Salon: </b> {{con.Nom_Salon}}</h2>
+        <h2><b>Tamaño del Salon: </b> {{con.Tam_Salon}}</h2>
+        <h2><b>Equipo del Salon: </b>{{con.Equ_Salin}}</h2> 
+        <p style="padding-left: 3%;">
+          <ion-button color="danger" mode="ios" (click)="baja(con.Id_Salon)">Borrar</ion-button>
+        </p>  
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card mode="ios" color="medium" button="true" href="/opsalon">
+    <ion-card-header>
+      <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+      <ion-card-title>
+        <ion-icon name="crop-outline"></ion-icon>
+        ¿Agregar un Salon?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Agregar un salon no habia sido tan facil, solo ¡Presiona Aqui!.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="font-size: 25px; color: rgb(108, 22, 247);">
+      <ion-icon name="bag-add"></ion-icon>
+      Registrar Salon </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="myform">
+    <p class="ion-text-center">
+      <img style="width: 90px;" src="assets/icon/salon.png" alt="">
+    </p>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="id-card-outline" class="text-primary"></ion-icon>
+          Nombre de Salon</h1></ion-label>
+        <ion-input type="text" formControlName="Nom_Salon"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="color-wand-outline" class="text-primary"></ion-icon>
+          Tamaño de Salon</h1></ion-label>
+        <ion-input type="text" formControlName="Tam_Salon"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked"><h1>
+          <ion-icon name="library-outline" class="text-primary"></ion-icon>
+          Equipo De Salon</h1></ion-label>
+        <ion-input type="text" formControlName="Equ_Salin"></ion-input>
+      </ion-item>
+
+      <p class="ion-text-center">
+      <ion-button color="tertiary" mode="ios" (click)="alta(myform.value)"  >
+        <ion-icon slot="start" name="bag-add-outline"  fill="clear"></ion-icon>
+        Agregar Salon</ion-button>
+      </p>     
+    
+  </form>
+  <ion-card mode="ios" color="medium" button="true" href="/salon">
+    <ion-card-header>
+      <ion-card-subtitle>Estamos para ayudarte</ion-card-subtitle>
+      <ion-card-title>
+        <ion-icon name="cloud-done-outline"></ion-icon>
+        Salones Registrados</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Para ver los salones registrados en el momento, ¡Presiona Aqui! 
+    </ion-card-content>
+  </ion-card>
+</ion-content>
